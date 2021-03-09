@@ -1,4 +1,6 @@
 
+#include <stdio.h>
+#include <stdlib.h>
 
 // Definición del tipo de datos de la Pila
 typedef int T;
@@ -38,7 +40,7 @@ int vaciaPila(Tpila pila){
     eturn(pila.tope==-1)?1:0;
 }
 //Determina si la Pila esta llena
-int llenaPila(Tpilapila){
+int llenaPila(Tpila pila){
     return(pila.tope==pila.tam-1)?1:0;
 }
 
@@ -49,4 +51,10 @@ int numElementosPila(Tpila pila){
 //Obtiene un elemento de la Pila de alguna posición
 T obtenerElementoPila(Tpila pila, int pos){
     return pila.elementos[pos];
+}
+
+int main(int argc, char const *argv[])
+{
+    
+    return 0;
 }
