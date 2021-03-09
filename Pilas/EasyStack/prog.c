@@ -55,6 +55,38 @@ T obtenerElementoPila(Tpila pila, int pos){
 
 int main(int argc, char const *argv[])
 {
+    Tpila miPila;
+    int N, i, p, valor;
+    scanf("%d", &N);
+    iniciarPila(&miPila, N);
+
+    for (i=0; i<N; i++){
+
+        scanf("%d", &p);
+
+
+        switch (p)
+        {
+        case 1:
+            scanf("%d", &valor);
+            if (!llenaPila(miPila))
+                agregarPila(&miPila, valor);
+            break;
+        
+        default:
+            break;
+        }
+
+    }
+
+
     
+    
+    {}
+
+
+
+
+
     return 0;
 }
