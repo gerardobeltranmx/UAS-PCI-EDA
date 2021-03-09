@@ -1,4 +1,6 @@
 
+
+// Definición del tipo de datos de la Pila
 typedef int T;
 
 // Definición del la estructura de la Pila
