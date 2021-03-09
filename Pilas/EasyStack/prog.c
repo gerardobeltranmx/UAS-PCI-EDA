@@ -1,7 +1,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
+#define TRUE 1
+#define FALSE 0
 // Definición del tipo de datos de la Pila
 typedef int T;
 
@@ -37,11 +38,11 @@ return pila.elementos[pila.tope];
 
 //Determina si la Pila esta vacía
 int vaciaPila(Tpila pila){
-    eturn(pila.tope==-1)?1:0;
+    return(pila.tope==-1)?TRUE:FALSE;
 }
 //Determina si la Pila esta llena
 int llenaPila(Tpila pila){
-    return(pila.tope==pila.tam-1)?1:0;
+    return(pila.tope==pila.tam-1)?TRUE:FALSE;
 }
 
 //Obtiene numero de elementos de la Pila
@@ -69,12 +70,12 @@ int main(int argc, char const *argv[])
         {
         case 1:
             scanf("%d", &valor);
-            if (!llenaPila(miPila))
+            if (llenaPila(miPila)==FALSE)
                 agregarPila(&miPila, valor);
             break;
         
         case 2:
-           if (!vaciaPila(miPila))
+           if (vaciaPila(miPila)==FALSE)
                 extraerPila(&miPila);
            break;
         case 3:
