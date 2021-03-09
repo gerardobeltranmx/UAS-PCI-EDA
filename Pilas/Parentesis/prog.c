@@ -2,8 +2,12 @@
 #include <stdlib.h>
 #define TRUE 1
 #define FALSE 0
+
+
 // Definición del tipo de datos de la Pila
 typedef char T;
+
+typedef int bool;
 
 // Definición del la estructura de la Pila
 typedef struct{
@@ -36,11 +40,11 @@ return pila.elementos[pila.tope];
 }
 
 //Determina si la Pila esta vacía
-int vaciaPila(Tpila pila){
+bool vaciaPila(Tpila pila){
     return(pila.tope==-1)?TRUE:FALSE;
 }
 //Determina si la Pila esta llena
-int llenaPila(Tpila pila){
+bool llenaPila(Tpila pila){
     return(pila.tope==pila.tam-1)?TRUE:FALSE;
 }
 
@@ -53,10 +57,27 @@ T obtenerElementoPila(Tpila pila, int pos){
     return pila.elementos[pos];
 }
 
+bool validar (char cadena[]){
+    bool resultado= TRUE;
+
+    // Codigo Aqui!!!
+
+
+    return resultado;
+}
+
 int main(int argc, char const *argv[])
 {
+    char expresion[1000000];
+    scanf ("%s", expresion);
 
-    
+    if (validar(expresion)==TRUE)
+            printf("SI\n");
+    else
+            printf("NO\n");         
+
+
+
 
     return 0;
 }
