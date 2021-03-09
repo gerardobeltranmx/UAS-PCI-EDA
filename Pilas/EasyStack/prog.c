@@ -73,9 +73,18 @@ int main(int argc, char const *argv[])
                 agregarPila(&miPila, valor);
             break;
         
-        default:
+        case 2:
+           if (!vaciaPila(miPila))
+                extraerPila(&miPila);
+           break;
+        case 3:
+            if (vaciaPila(miPila))
+                printf("Empty!\n");
+            else
+               printf("%d\n", obtenerElementoTopePila(miPila));
+
             break;
-        }
+         }
 
     }
 
