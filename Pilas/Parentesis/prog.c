@@ -60,7 +60,7 @@ T obtenerElementoPila(Tpila pila, int pos){
 bool validar (char cadena[]){
     bool resultado= TRUE;
 
-    // Codigo Aqui!!!
+    // Codigo   Aqui!!!
 
 
     return resultado;
