@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #define TRUE 1
 #define FALSE 0
-// Definición del tipo de datos de la Pila
+// Definicion del tipo de datos de la Pila
 typedef int T;
 
 // Definición del la estructura de la Pila
