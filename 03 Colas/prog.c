@@ -58,10 +58,37 @@ T obtenerElementoCola(TCola cola, int pos){
 
 int main(){
 
+  TCola fila;
+  int N, i;
+  char op;
+ iniciarCola(&fila);
+  scanf ("%d", &N);
+  for (i=0; i<N; i++){
+      getchar();
+      scanf("%c", &op);
 
+    switch (op){
+        case 'E':
+            if (llenaCola(fila)==FALSE)
+                agregarCola(&fila, op);
+            break;
 
+        case 'N':
+            if (llenaCola(fila)==FALSE && numElementosCola(fila)<=4){ 
+                agregarCola(&fila, op);
+                printf("espera\n");
+            }
+            else
+                printf("no espera\n");
+            break;
 
-
+        case 'F':
+            if (vaciaCola(fila)==FALSE)
+                extraerCola(&fila);
+            break;
+    }
+    
+  }  
 return 0;
 
 }
