@@ -87,7 +87,7 @@ int main(int argc, char const *argv[])
      scanf("%d", &N);
 
     for (i=0; i < N ; i++){
-
+        getchar();
         scanf("%c", &op);
 
         switch (op)
