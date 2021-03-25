@@ -1,4 +1,8 @@
+#define MAX 10000
 
+//****************************************
+// Pila
+//***************************************
 typedef struct{
    int tipo;
    char nombre[11];
@@ -34,10 +38,76 @@ T extraerPila(TPila *pila){
 }
 
 
+//****************************************
+// Cola
+//***************************************
+typedef struct{
+    int frente, final;
+    T elementos[MAX];
+} TCola;
+
+//Inicializa una cola
+void iniciarCola(TCola *cola){
+    cola->frente=0;
+    cola->final=-1;
+}
+// Agrega un dato a la cola
+void agregarCola(TCola *cola, T dato){
+    cola->final++;
+    cola->elementos[cola->final]=dato;
+}
+
+// Extrae un dato de la cola
+T extraerCola(TCola *cola){
+int i;
+
+T dato = cola->elementos[cola->frente];
+    
+    for(i=0; i<cola->final; i++)
+        cola->elementos[i]=cola->elementos[i+1];
+    cola->final--;    
+    return dato;
+}
 
 
 int main(int argc, char const *argv[])
 {
+
+    TPila filaP;
+    TCola filaC;
+    int N, i;
+    char op;
+    TCliente cliente;
+
+    iniciarPila(&filaP, MAX);
+    iniciarCola(&filaC);
+
+     scanf("%d", &N);
+
+    for (i=0; i < N ; i++){
+
+        scanf("%c", &op);
+
+        switch (op)
+        {
+        case 'E':
+                scanf ("%d%s", &cliente.tipo, cliente.nombre);
+                if (cliente.tipo==1)
+                    agregarCola(&filaC, cliente);
+                else
+                    agregarPila(&filaP, cliente);    
+            break;
+
+        case 'A':
+            break;
+        }
+
+
+    }
+
+
+
+
     /* code */
     return 0;
 }
