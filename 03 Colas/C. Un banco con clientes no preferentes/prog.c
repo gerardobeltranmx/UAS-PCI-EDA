@@ -75,7 +75,7 @@ int main(int argc, char const *argv[])
 
     TPila filaP;
     TCola filaC;
-    int N, i;
+    int N, i, tipo;
     char op;
     TCliente cliente;
 
@@ -97,8 +97,15 @@ int main(int argc, char const *argv[])
                 else
                     agregarPila(&filaP, cliente);    
             break;
-
         case 'A':
+                scanf ("%d", &tipo);
+                if (tipo==1)
+                     cliente = extraerCola(&filaC);
+                else
+                    cliente = extraerPila(&filaP);        
+
+                printf ("%s\n", cliente.nombre);
+
             break;
         }
 
